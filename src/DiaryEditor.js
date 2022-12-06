@@ -1,7 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { DiaryDispatchContext } from "./App";
 // useRef 엘리먼트 돔 요소를 선택할수 있는 기능
 
-const DiaryEditor = ({ onCreate }) => {
+const DiaryEditor = () => {
+    const { onCreate } = useContext(DiaryDispatchContext);
+
     const authorInput = useRef();
     const contentInput = useRef();
     const [state, setState] = useState({
