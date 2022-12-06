@@ -7,7 +7,7 @@ const DiaryEditor = ({ onCreate }) => {
     const [state, setState] = useState({
         author: "",
         content: "",
-        emotion: "2",
+        emotion: "1",
     });
 
     const handleChangeState = (e) => {
